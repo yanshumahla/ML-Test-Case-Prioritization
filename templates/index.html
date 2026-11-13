@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Case Prioritization | ML QA Lab</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">TP</span><div><b>QA PRIORITY LAB</b><small>Machine Learning · Regression Testing</small></div></div>
+    <span class="status"><i></i> ML service <b id="serviceStatus">Checking</b></span>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div><p class="eyebrow">INTELLIGENT TEST EXECUTION</p><h1>Prioritize what<br><span>matters most.</span></h1>
+      <p class="sub">Use historical test signals and machine learning to rank regression test cases by predicted risk.</p>
+      <div class="hero-actions"><label class="upload-btn" for="csvFile">↑ Upload test-case CSV</label><button class="secondary" id="sampleBtn">Load sample dataset</button></div>
+      <input type="file" id="csvFile" accept=".csv" hidden>
+      <p class="hint">CSV only · Maximum 20,000 test cases · See README for required columns</p></div>
+      <div class="hero-art"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="core">ML<br><small>RANK</small></div><div class="node n1">01</div><div class="node n2">02</div><div class="node n3">03</div></div>
+    </section>
+    <div id="message" class="message hidden"></div>
+    <section class="stats">
+      <article class="stat"><span>Total test cases</span><strong id="total">—</strong><small>In current run</small></article>
+      <article class="stat"><span>Critical</span><strong id="critical" class="red">—</strong><small>Execute first</small></article>
+      <article class="stat"><span>High priority</span><strong id="high" class="orange">—</strong><small>Next in queue</small></article>
+      <article class="stat"><span>Model macro F1</span><strong id="f1">—</strong><small>Held-out test split</small></article>
+    </section>
+    <section class="panel">
+      <div class="section-head"><div><p class="eyebrow">EXECUTION QUEUE</p><h2>Prioritized test cases</h2></div><button class="secondary" id="exportBtn" disabled>↓ Export CSV</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Rank</th><th>Test case</th><th>Module</th><th>Priority</th><th>Risk score</th><th>Confidence</th><th>Last result</th></tr></thead>
+      <tbody id="resultsBody"><tr><td colspan="7" class="empty">Upload a dataset or load the sample dataset to begin.</td></tr></tbody></table></div>
+    </section>
+    <section class="lower-grid">
+      <article class="panel"><p class="eyebrow">PRIORITY DISTRIBUTION</p><h2>Risk overview</h2><div id="distribution" class="bars"><p class="empty">No predictions yet.</p></div></article>
+      <article class="panel"><p class="eyebrow">MODEL QUALITY</p><h2>Evaluation metrics</h2><div class="metric-list" id="metrics"><p class="empty">Loading metrics…</p></div><p class="disclaimer">Demo model is trained on synthetic, rule-labeled data. Metrics do not establish production performance.</p></article>
+    </section>
+    <footer>ML-Based Test Case Prioritization for Regression Testing <span>Academic project · Demo build 1.0</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body></html>

@@ -1,0 +1,41 @@
+{
+  "accuracy": 0.6917,
+  "macro_precision": 0.6757,
+  "macro_recall": 0.6911,
+  "macro_f1": 0.6817,
+  "labels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "confusion_matrix": [
+    [
+      16,
+      8,
+      0,
+      0
+    ],
+    [
+      12,
+      54,
+      11,
+      0
+    ],
+    [
+      0,
+      18,
+      43,
+      13
+    ],
+    [
+      0,
+      1,
+      11,
+      53
+    ]
+  ],
+  "test_rows": 240,
+  "training_rows": 960,
+  "note": "Synthetic rule-derived demonstration data; metrics are not evidence of production performance."
+}
